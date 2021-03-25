@@ -13,16 +13,12 @@
       "targets": {
         "build": {
           "executor": "@nrwl/node:build",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/todoapp",
             "main": "apps/todoapp/src/main.ts",
             "tsConfig": "apps/todoapp/tsconfig.app.json",
-            "assets": [
-              "apps/todoapp/src/assets"
-            ]
+            "assets": ["apps/todoapp/src/assets"]
           },
           "configurations": {
             "production": {
@@ -47,16 +43,12 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/todoapp/**/*.ts"
-            ]
+            "lintFilePatterns": ["apps/todoapp/**/*.ts"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/todoapp"
-          ],
+          "outputs": ["coverage/apps/todoapp"],
           "options": {
             "jestConfig": "apps/todoapp/jest.config.js",
             "passWithNoTests": true
@@ -72,16 +64,12 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/todos/domain/**/*.ts"
-            ]
+            "lintFilePatterns": ["libs/todos/domain/**/*.ts"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/todos/domain"
-          ],
+          "outputs": ["coverage/libs/todos/domain"],
           "options": {
             "jestConfig": "libs/todos/domain/jest.config.js",
             "passWithNoTests": true
@@ -97,16 +85,12 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/todos/application/**/*.ts"
-            ]
+            "lintFilePatterns": ["libs/todos/application/**/*.ts"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/todos/application"
-          ],
+          "outputs": ["coverage/libs/todos/application"],
           "options": {
             "jestConfig": "libs/todos/application/jest.config.js",
             "passWithNoTests": true
@@ -122,16 +106,12 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/todos/infrastructure/**/*.ts"
-            ]
+            "lintFilePatterns": ["libs/todos/infrastructure/**/*.ts"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/todos/infrastructure"
-          ],
+          "outputs": ["coverage/libs/todos/infrastructure"],
           "options": {
             "jestConfig": "libs/todos/infrastructure/jest.config.js",
             "passWithNoTests": true
@@ -147,16 +127,12 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/utils/**/*.ts"
-            ]
+            "lintFilePatterns": ["libs/utils/**/*.ts"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/utils"
-          ],
+          "outputs": ["coverage/libs/utils"],
           "options": {
             "jestConfig": "libs/utils/jest.config.js",
             "passWithNoTests": true
@@ -172,16 +148,12 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/todos/shell/**/*.ts"
-            ]
+            "lintFilePatterns": ["libs/todos/shell/**/*.ts"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/todos/shell"
-          ],
+          "outputs": ["coverage/libs/todos/shell"],
           "options": {
             "jestConfig": "libs/todos/shell/jest.config.js",
             "passWithNoTests": true
@@ -197,16 +169,12 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/todos/ui/**/*.ts"
-            ]
+            "lintFilePatterns": ["libs/todos/ui/**/*.ts"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/todos/ui"
-          ],
+          "outputs": ["coverage/libs/todos/ui"],
           "options": {
             "jestConfig": "libs/todos/ui/jest.config.js",
             "passWithNoTests": true

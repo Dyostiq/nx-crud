@@ -1,4 +1,4 @@
-import {Todo} from "@dyostiq/todos/domain";
+import { Todo } from '@dyostiq/todos/domain';
 
 export abstract class TodoRepository {
   abstract save(todo: Todo): Promise<number>;

@@ -1,9 +1,9 @@
 export class Todo {
-  private status: 'active' | 'resolved' = 'active'
+  private status: 'active' | 'resolved' = 'active';
 
   constructor(
     public readonly title: string,
-    public readonly id = Math.random(),
+    public readonly id = Math.random()
   ) {}
 
   isActive(): boolean {
@@ -12,17 +12,17 @@ export class Todo {
 
   resolve(): void {
     if (this.isActive()) {
-      this.status = "resolved"
+      this.status = 'resolved';
     } else {
-      throw new Error()
+      throw new Error();
     }
   }
 
   unresolve(): void {
-    if (!this.isActive()){
-      this.status = 'active'
+    if (!this.isActive()) {
+      this.status = 'active';
     } else {
-      throw new Error()
+      throw new Error();
     }
   }
 }

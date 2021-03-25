@@ -1,5 +1,5 @@
-import {TodosFacade} from './todos-facade/todos-facade.service';
-import {fixtures} from "./todos-application.module.fixtures";
+import { TodosFacade } from './todos-facade/todos-facade.service';
+import { fixtures } from './todos-application.module.fixtures';
 
 let service: TodosFacade;
 
@@ -56,9 +56,9 @@ it(`should list multiple todos`, async () => {
 
 it(`should resolve one todo`, async () => {
   // given
-  const ids = await fixtures.createMultipleTodos(service)
+  const ids = await fixtures.createMultipleTodos(service);
   // when
-  await service.resolveTodo(ids[1])
+  await service.resolveTodo(ids[1]);
   // then
   expect(await service.listTodos()).toStrictEqual([
     {
@@ -81,16 +81,16 @@ it(`should resolve one todo`, async () => {
       active: true,
       id: ids[3],
     },
-  ])
-})
+  ]);
+});
 
 it(`should unresolve one todo`, async () => {
   // given
-  const ids = await fixtures.createMultipleTodos(service)
+  const ids = await fixtures.createMultipleTodos(service);
   // and
-  await service.resolveTodo(ids[1])
+  await service.resolveTodo(ids[1]);
   // when
-  await service.unresolveTodo(ids[1])
+  await service.unresolveTodo(ids[1]);
   // then
   expect(await service.listTodos()).toStrictEqual([
     {
@@ -113,5 +113,5 @@ it(`should unresolve one todo`, async () => {
       active: true,
       id: ids[3],
     },
-  ])
-})
+  ]);
+});

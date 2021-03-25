@@ -1,1 +1,1 @@
-export { isDefined } from './lib/is-defined'
+export { isDefined } from './lib/is-defined';

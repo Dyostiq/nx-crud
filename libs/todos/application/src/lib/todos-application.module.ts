@@ -1,4 +1,4 @@
-import {DynamicModule, Module, ModuleMetadata} from '@nestjs/common';
+import { DynamicModule, Module, ModuleMetadata } from '@nestjs/common';
 import { CreateTodoService } from './create-todo/create-todo.service';
 import { ResolveTodoService } from './resolve-todo/resolve-todo.service';
 import { UnresolveTodoService } from './unresolve-todo/unresolve-todo.service';
@@ -11,9 +11,15 @@ export class TodosApplicationModule {
     return {
       imports: [...Adapters],
       controllers: [],
-      providers: [CreateTodoService, ResolveTodoService, UnresolveTodoService, TodosFacade, ListTodosService],
+      providers: [
+        CreateTodoService,
+        ResolveTodoService,
+        UnresolveTodoService,
+        TodosFacade,
+        ListTodosService,
+      ],
       exports: [TodosFacade],
-      module: TodosApplicationModule
+      module: TodosApplicationModule,
     };
   }
 }

@@ -1,23 +1,18 @@
-import {Body, Controller, Get, Param, Post, Put} from '@nestjs/common';
-import {TodoCreate, TodosFacade} from "@dyostiq/todos/application";
+import { Body, Controller, Get, Param, Post, Put } from '@nestjs/common';
+import { TodoCreate, TodosFacade } from '@dyostiq/todos/application';
 
 @Controller('todos')
 export class TodosController {
-  constructor(
-    private readonly facade: TodosFacade
-  ) {
-  }
+  constructor(private readonly facade: TodosFacade) {}
 
   @Get()
   async get() {
-    return await this.facade.listTodos()
+    return await this.facade.listTodos();
   }
 
   @Post()
-  async create(
-    @Body() todo: TodoCreate
-  ) {
-    await this.facade.createTodo(todo)
+  async create(@Body() todo: TodoCreate) {
+    await this.facade.createTodo(todo);
   }
 
   @Put(':id')
@@ -26,9 +21,9 @@ export class TodosController {
     @Body() todoChange: { active: boolean }
   ) {
     if (!todoChange.active) {
-      await this.facade.resolveTodo(+id)
+      await this.facade.resolveTodo(+id);
     } else {
-      await this.facade.unresolveTodo(+id)
+      await this.facade.unresolveTodo(+id);
     }
   }
 }

@@ -13,12 +13,16 @@
       "targets": {
         "build": {
           "executor": "@nrwl/node:build",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/todoapp",
             "main": "apps/todoapp/src/main.ts",
             "tsConfig": "apps/todoapp/tsconfig.app.json",
-            "assets": ["apps/todoapp/src/assets"]
+            "assets": [
+              "apps/todoapp/src/assets"
+            ]
           },
           "configurations": {
             "production": {
@@ -43,14 +47,43 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/todoapp/**/*.ts"]
+            "lintFilePatterns": [
+              "apps/todoapp/**/*.ts"
+            ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/todoapp"],
+          "outputs": [
+            "coverage/apps/todoapp"
+          ],
           "options": {
             "jestConfig": "apps/todoapp/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "todos-domain": {
+      "root": "libs/todos/domain",
+      "sourceRoot": "libs/todos/domain/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/todos/domain/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/todos/domain"
+          ],
+          "options": {
+            "jestConfig": "libs/todos/domain/jest.config.js",
             "passWithNoTests": true
           }
         }

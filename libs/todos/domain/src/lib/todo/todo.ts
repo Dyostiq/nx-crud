@@ -2,7 +2,8 @@ export class Todo {
   private status: 'active' | 'resolved' = 'active'
 
   constructor(
-    public readonly id = Math.random()
+    public readonly title: string,
+    public readonly id = Math.random(),
   ) {}
 
   isActive(): boolean {

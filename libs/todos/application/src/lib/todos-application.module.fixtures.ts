@@ -4,6 +4,7 @@ import {TodosApplicationModule} from "@dyostiq/todos/application";
 import {Module} from "@nestjs/common";
 import {TodoRepository} from "./todo.repository";
 import {Todo} from "@dyostiq/todos/domain";
+import {isDefined} from "@dyostiq/utils";
 
 export const fixtures = {
   module: null as TestingModule | null,
@@ -39,10 +40,6 @@ export const fixtures = {
       ].map((title) => facade.createTodo({ title })),
     ),
 };
-
-function isDefined<T>(value: T | null | undefined): value is T {
-  return value !== undefined && value !== null
-}
 
 export class InMemoryTodoRepository extends TodoRepository {
   private readonly db: Record<string, Todo | undefined> = {}

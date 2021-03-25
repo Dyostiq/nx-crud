@@ -16,7 +16,11 @@
     "baseUrl": ".",
     "paths": {
       "@dyostiq/todos/domain": ["libs/todos/domain/src/index.ts"],
-      "@dyostiq/todos/application": ["libs/todos/application/src/index.ts"]
+      "@dyostiq/todos/application": ["libs/todos/application/src/index.ts"],
+      "@dyostiq/todos/infrastructure": [
+        "libs/todos/infrastructure/src/index.ts"
+      ],
+      "@dyostiq/utils": ["libs/utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

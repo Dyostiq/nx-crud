@@ -1,3 +1,7 @@
 module.exports = {
-  projects: ['<rootDir>/apps/todoapp', '<rootDir>/libs/todos/domain'],
+  projects: [
+    '<rootDir>/apps/todoapp',
+    '<rootDir>/libs/todos/domain',
+    '<rootDir>/libs/todos/application',
+  ],
 };

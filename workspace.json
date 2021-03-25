@@ -88,6 +88,31 @@
           }
         }
       }
+    },
+    "todos-application": {
+      "root": "libs/todos/application",
+      "sourceRoot": "libs/todos/application/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/todos/application/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/todos/application"
+          ],
+          "options": {
+            "jestConfig": "libs/todos/application/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

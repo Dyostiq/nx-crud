@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@dyostiq/todos/domain": ["libs/todos/domain/src/index.ts"]
+      "@dyostiq/todos/domain": ["libs/todos/domain/src/index.ts"],
+      "@dyostiq/todos/application": ["libs/todos/application/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

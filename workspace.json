@@ -163,6 +163,31 @@
           }
         }
       }
+    },
+    "todos-shell": {
+      "root": "libs/todos/shell",
+      "sourceRoot": "libs/todos/shell/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/todos/shell/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/todos/shell"
+          ],
+          "options": {
+            "jestConfig": "libs/todos/shell/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

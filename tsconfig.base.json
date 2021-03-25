@@ -20,7 +20,8 @@
       "@dyostiq/todos/infrastructure": [
         "libs/todos/infrastructure/src/index.ts"
       ],
-      "@dyostiq/utils": ["libs/utils/src/index.ts"]
+      "@dyostiq/utils": ["libs/utils/src/index.ts"],
+      "@dyostiq/todos/shell": ["libs/todos/shell/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

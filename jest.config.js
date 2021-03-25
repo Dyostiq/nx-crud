@@ -6,5 +6,6 @@ module.exports = {
     '<rootDir>/libs/todos/infrastructure',
     '<rootDir>/libs/utils',
     '<rootDir>/libs/todos/shell',
+    '<rootDir>/libs/todos/ui',
   ],
 };

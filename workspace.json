@@ -188,6 +188,31 @@
           }
         }
       }
+    },
+    "todos-ui": {
+      "root": "libs/todos/ui",
+      "sourceRoot": "libs/todos/ui/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/todos/ui/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/todos/ui"
+          ],
+          "options": {
+            "jestConfig": "libs/todos/ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

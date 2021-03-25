@@ -12,7 +12,7 @@ export class TodosApplicationModule {
       imports: [...Adapters],
       controllers: [],
       providers: [CreateTodoService, ResolveTodoService, UnresolveTodoService, TodosFacade, ListTodosService],
-      exports: [],
+      exports: [TodosFacade],
       module: TodosApplicationModule
     };
   }

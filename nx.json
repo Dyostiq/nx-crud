@@ -21,6 +21,7 @@
     "todos-application": { "tags": [] },
     "todos-infrastructure": { "tags": [] },
     "utils": { "tags": [] },
-    "todos-shell": { "tags": [] }
+    "todos-shell": { "tags": [] },
+    "todos-ui": { "tags": [] }
   }
 }
